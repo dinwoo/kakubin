@@ -1,14 +1,15 @@
 doctype html
-html(lang="en")
+html(lang="zh-Hant-TW")
   head
     include partials/Meta.pug
     include partials/CssLink.pug
+    block pageCSS
+    include partials/JsSrc.pug
   body
-    //- include components/Header.pug
-    block header
+    block head
     block body
     block footer
-    include partials/JsSrc.pug
+    block pageJs
 
 
     

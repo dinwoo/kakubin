@@ -1,13 +1,46 @@
 extend ../Layout.pug
 
-block header
-  include ../components/Header.pug
+block pageCSS
+  link(href="./css/index.css", rel="stylesheet")
 
-block footer
-  include ../components/Footer.pug
+//- block header
+//-   include ../components/Header.pug
+
+//- block footer
+//-   include ../components/Footer.pug
 
 block body
   article
-    | index
-  
+    section.leading-page
+      figure.logo
+        img(src="./images/logo.png", alt="leading-page-logo")
+      .leading-page-box
+        figure.product
+          img(src="./images/leading_page_01.png", alt="leading-page-product")
+        p 請確認您已年滿18歲
+        .btn-box
+          .btn Yes
+          .btn No
+    section.banner
+      figure.logo
+        img(src="./images/logo.png", alt="logo")
+      figure.cow
+        img(src="./images/banner_cow.png", alt="banner-cow")
+      .slogan-box
+        figure.pic-1
+          img(src="./images/banner_01.png", alt="slogan1")
+        figure.pic-2
+          img(src="./images/banner_02.png", alt="slogan2")
+      .product-box
+        figure.pic-3
+          img(src="./images/banner_03.png", alt="slogan3")
+        figure.pic-4
+          img(src="./images/banner_04.png", alt="slogan4")
+      .slogan-txt
+        | 角HIGH VS 和牛絕佳體驗，
+        br
+        | 多種組合限時搶購 !
+        br
+        | 品嚐究極美味，滿足你吃與喝的雙重享受!
+
 
