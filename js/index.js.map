@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["fun","console","log"],"mappings":"aAAA,IAAIA,IAAM,WACRC,QAAQC,IAAI,SACbF","file":"index.js","sourcesContent":["let fun = ()=>{\r\n  console.log(\"!!!!\");\r\n}\r\n\r\nfun();"]}
