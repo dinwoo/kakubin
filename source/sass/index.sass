@@ -2,6 +2,20 @@
 @import "all.sass"
 
 
+.wrapper
+  width: 84.375%
+  margin: auto
+figure.title-icon
+  width: 3.4375%
+  font-size: 0
+  margin: auto
+.title
+  padding: 2% 0
+  font-weight: bold
+  text-align: center
+  +fontH1
+
+
 section.leading-page
   display: none
   width: 100%
@@ -76,7 +90,86 @@ section.banner
       vertical-align: top
   .slogan-txt
     +fontH3
+    font-weight: bold
     padding-left: 11.40625%
     margin-top: -10%
 
+
+section.video,section.teaching
+  padding: 5% 0
+  .wrapper
+    .video-carousel
+      .video-item
+        width: 100%
+        border: 5px solid #000
+        box-sizing: border-box
+        .iframe-box
+          width: 100%
+          padding-bottom: 100%
+          position: relative
+          iframe
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+        .info
+          padding: 4.6875% 5.46875%
+          .sub-title
+            color: $red
+            +fontH3
+          .txt
+            +fontH3
+
+
+section.setmeal
+  padding: 5% 0
+  .wrapper
+    figure.title-icon
+    .title
+    .setmeal-carousel
+      .setmeal-item
+        figure.pic
+        .info
+          padding: 4.6875% 5.46875%
+          margin-top: -10%
+          color: #fff
+          background-color: #000
+          figure.icon
+            width: 24.21875%
+            margin: auto
+          .price-box
+            margin: 4.6875% 0
+            position: relative
+            .name
+              font-weight: bold
+              +fontH3
+            .original-price
+              +fontH3
+            .Special-price
+              color: $yellow
+              font-weight: bold
+              +fontH2
+            .tag
+              +fontP
+              width: 20.3125%
+              line-height: 1.666667rem
+              border: 2px solid #fff
+              text-align: center
+              border-radius: 91.666667rem
+              position: absolute
+              right: 0
+              bottom: 0
+          .info-txt
+            font-weight: normal
+            +fontP
+            b
+
+section.teaching
+  .wrapper
+    .video-carousel
+      .video-item
+        .iframe-box
+          width: 100%
+          padding-bottom: 56.296296%
 
