@@ -3,6 +3,9 @@ extend ../Layout.pug
 block pageCSS
   link(href="./css/index.css", rel="stylesheet")
 
+block pageJs
+  script(src="./js/index.js")
+
 //- block header
 //-   include ../components/Header.pug
 
@@ -11,6 +14,30 @@ block pageCSS
 
 block body
   article
+    section.menu
+      .close
+      ul
+        li
+          figure.icon
+            img(src="./images/menu_icon.png", alt="menu_icon")
+          p 首頁
+        li
+          figure.icon
+            img(src="./images/menu_icon.png", alt="menu_icon")
+          p 最嗨搭配
+        li
+          figure.icon
+            img(src="./images/menu_icon.png", alt="menu_icon")
+          p 經典和牛套餐
+        li
+          figure.icon
+            img(src="./images/menu_icon.png", alt="menu_icon")
+          p 角HIGH x 和牛究極吃法
+        li
+          figure.icon
+            img(src="./images/menu_icon.png", alt="menu_icon")
+          p 合作店家
+
     section.leading-page
       figure.logo
         img(src="./images/logo.png", alt="leading-page-logo")
@@ -24,6 +51,7 @@ block body
     section.banner
       figure.logo
         img(src="./images/logo.png", alt="logo")
+      .ham
       figure.cow
         img(src="./images/banner_cow.png", alt="banner-cow")
       .slogan-box
@@ -47,13 +75,31 @@ block body
         figure.title-icon
           img(src="./images/title_icon.png", alt="icon")
         .title 感受最嗨搭配
-        .video-carousel
+        .video-carousel#video-carousel.owl-carousel
+          .video-item
+            .iframe-box
+              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            .info
+              .sub-title 發薪第一杯
+              P.txt 不要再等了，你的薪水已入帳，再等下去和牛烤熟就不好吃了!
+          .video-item
+            .iframe-box
+              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            .info
+              .sub-title 充電第二杯
+              P.txt 把工作的不愉快一口氣倒進角嗨吧！ 讓沁涼的碳酸氣泡將煩膩的情緒一次帶走！
           .video-item
             .iframe-box
               iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               .sub-title 敘舊第三杯
               P.txt 來場熱鬧的好友聚會，不怕喧囂與大啖一番料理，讓角HIGH搭和牛，爽快、俐落、有勁的口感齊湧上
+          .video-item
+            .iframe-box
+              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            .info
+              .sub-title 乾杯嗨起來
+              P.txt 飲下沁涼清香的角HIGH、吃一口和牛 感受被角HIGH帶出的的圓潤甘甜肉香滋味在舌尖蔓延，再乾一杯，繼續嗨！
         
     section.setmeal
       .wrapper
@@ -93,6 +139,32 @@ block body
               iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               P.txt 想知道吃和牛哪個部位搭配角HIGH會迸出什麼不同的火花嗎？讓安心亞與阿Ken專業的來！帶你吃出絕佳的美味搭配。
+
+    section.cooperation
+      .wrapper
+        figure.title-icon
+          img(src="./images/title_icon.png", alt="icon")
+        .title 角嗨和牛祭合作店家
+        .pic-box
+          figure.pic
+            img(src="./images/cooperation_01.png", alt="cooperation_pic")
+          figure.pic
+            img(src="./images/cooperation_02.png", alt="cooperation_pic")
+        .info
+          .sub-title 即日起至2021/6/20止
+          P.txt 全台乾杯與乾杯BAR皆有專屬角HIGH和牛套餐
+        a.btn(href="" target="_blank")
+          span 查詢全台分店
+        a.btn(href="" target="_blank")
+          span 馬上訂位
+    
+    section.warning
+      figure
+        img(src="./images/warning.png", alt="warning")
       
+
+
+
+
 
 
