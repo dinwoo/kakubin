@@ -6,38 +6,14 @@ block pageCSS
 block pageJs
   script(src="./js/index.js")
 
-//- block header
-//-   include ../components/Header.pug
+block header
+  include ../components/Header.pug
 
 //- block footer
 //-   include ../components/Footer.pug
 
 block body
   article
-    section.menu
-      .close
-      ul
-        li
-          figure.icon
-            img(src="./images/menu_icon.png", alt="menu_icon")
-          p 首頁
-        li
-          figure.icon
-            img(src="./images/menu_icon.png", alt="menu_icon")
-          p 最嗨搭配
-        li
-          figure.icon
-            img(src="./images/menu_icon.png", alt="menu_icon")
-          p 經典和牛套餐
-        li
-          figure.icon
-            img(src="./images/menu_icon.png", alt="menu_icon")
-          p 角HIGH x 和牛究極吃法
-        li
-          figure.icon
-            img(src="./images/menu_icon.png", alt="menu_icon")
-          p 合作店家
-
     section.leading-page
       figure.logo
         img(src="./images/logo.png", alt="leading-page-logo")
@@ -46,12 +22,9 @@ block body
           img(src="./images/leading_page_01.png", alt="leading-page-product")
         p 請確認您已年滿18歲
         .btn-box
-          .btn Yes
-          .btn No
+          .btn.yes Yes
+          .btn.no No
     section.banner
-      figure.logo
-        img(src="./images/logo.png", alt="logo")
-      .ham
       figure.cow
         img(src="./images/banner_cow.png", alt="banner-cow")
       .slogan-box
@@ -70,6 +43,7 @@ block body
         | 多種組合限時搶購 !
         br
         | 品嚐究極美味，滿足你吃與喝的雙重享受!
+    
     section.video
       .wrapper
         figure.title-icon

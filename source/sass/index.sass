@@ -29,65 +29,30 @@ figure.title-icon
     &:focus
       outline: none
 
-section.menu
-  display: none
-  width: 100%
-  max-width: 750px
-  height: 100vh
-  padding: 10% 13.28125% 0
-  box-sizing: border-box
-  background-color: #f7c700
-  position: fixed
-  z-index: 100
-  .close
-    width: 2rem
-    height: 2rem
-    position: absolute
-    top: 1rem
-    right: 1rem
-    transform: rotate(45deg)
-    cursor: pointer
-    &:before,&:after
-      content: ''
-      display: block
-      background-color: #000
-      +pstc0
-    &:before
-      width: 10%
-      height: 100%
-    &:after
-      width: 100%
-      height: 10%
-
-  ul
-    list-style: none
-    li
-      cursor: pointer
-      figure.icon
-        width: 2.34375%
-        +dib
-      p
-        +fontH1
-        +dib
-        font-weight: bold
-        line-height: 6.25rem
-      & + li
-        border-top: 1px solid #000
 
 
 section.leading-page
-  display: none
   width: 100%
+  max-width: 750px
   height: 100vh
-  position: relative
+  background-image: url('../images/bg.png')
+  position: fixed
+  z-index: 200
+  overflow-y: auto
   figure.logo
     width: 15%
     padding: 5.5% 6.25%
   .leading-page-box
+    // width: 30%
+    // +rwd(560px)
     width: 52%
+    +rwdh(640px)
+      width: 30%
     +pstc5
     figure.product
       width: 100%
+      +rwdh(640px)
+        margin-bottom: -25%
     p
       +fontH1
       text-align: center
@@ -95,6 +60,8 @@ section.leading-page
     .btn-box
       padding-top: 15%
       font-size: 0
+      +rwdh(640px)
+        padding-top: 5%
       .btn
         width: 45%
         margin: 0 2.5%
@@ -108,19 +75,6 @@ section.leading-page
 
 section.banner
   position: relative
-  figure.logo
-    width: 15%
-    padding: 5.5% 6.25%
-    position: absolute
-    top: 0
-    left: 0
-  .ham
-    width: 2rem
-    height: 2rem
-    position: absolute
-    top: 1rem
-    right: 1rem
-    background-color: #ccc
   figure.cow
     width: 87.03125%
     margin-bottom: -13%
