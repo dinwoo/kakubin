@@ -53,6 +53,17 @@
     var controller = new ScrollMagic.Controller();
     // ------------------------------------------------------------------------------------------------------
 
+    var headerScene = new ScrollMagic.Scene({
+      triggerElement: "section.video",
+      offset: -100, //指標位移
+      triggerHook: 0,
+      reverse: true, //動畫重複 default:true
+    })
+      .setClassToggle("header", "active")
+      // .addIndicators({ name: "header" }) // 指標顯示
+      .addTo(controller);
+    // ------------------------------------------------------------------------------------------------------
+
     var itemTween1 = new TimelineMax()
       .add(TweenMax.to('section.banner .cow', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
       .add(TweenMax.to('section.banner figure.pic-1', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
