@@ -32,7 +32,7 @@
     );
 
     TweenMax.set(
-      "section.banner .slogan-txt,section.video,section.setmeal,section.teaching,section.cooperation",
+      "section.banner .slogan-txt,section.banner .title-box,section.video,section.setmeal,section.teaching,section.cooperation",
       {
         opacity: 0,
         y: 50,
@@ -54,8 +54,8 @@
     // ------------------------------------------------------------------------------------------------------
 
     var headerScene = new ScrollMagic.Scene({
-      triggerElement: "section.video",
-      offset: -100, //指標位移
+      triggerElement: "section.banner",
+      offset: 100, //指標位移
       triggerHook: 0,
       reverse: true, //動畫重複 default:true
     })
@@ -70,6 +70,7 @@
       .add(TweenMax.to('section.banner figure.pic-2', 0.5, { opacity: 1, x: 0, y: 0,delay: -.2, ease: Power1.easeOut }))
       .add(TweenMax.to('section.banner figure.pic-3,section.banner figure.pic-4', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
       .add(TweenMax.to('section.banner .slogan-txt', 0.5, { opacity: 1, x: 0, y: 0,delay: -.5, ease: Power1.easeOut }))
+      .add(TweenMax.to('section.banner .title-box', 0.5, { opacity: 1, x: 0, y: 0,delay: -.5, ease: Power1.easeOut }))
 
     var itemScene1 = new ScrollMagic.Scene({
       triggerElement: "section.banner",
@@ -152,7 +153,8 @@
     // doAnimate();
 
     $(".yes").on("click", function () {
-      $("section.leading-page").hide();
+      $(".leading-page").fadeOut();
+      $('article').show();
       doAnimate();
     });
     $(".no").on("click", function () {
@@ -176,9 +178,6 @@
       loop: true,
       margin: 10,
       responsiveClass: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
       items: 1,
       nav: false,
       center: true,
@@ -189,9 +188,6 @@
       loop: true,
       margin: 10,
       responsiveClass: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
       items: 1,
       nav: false,
       center: true,

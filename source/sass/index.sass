@@ -8,7 +8,7 @@
 figure.title-icon
   width: 3.4375%
   font-size: 0
-  margin: auto
+  margin: 5% auto 0
 .title
   padding: 2% 0
   font-weight: bold
@@ -31,13 +31,16 @@ figure.title-icon
 
 
 
-section.leading-page
+.leading-page
   // display: none
   width: 100%
-  max-width: 640px
+  max-width: 415px
   height: 100vh
+  margin: auto
   background-image: url('../images/bg.png')
   position: fixed
+  left: 0
+  right: 0
   z-index: 200
   overflow-y: auto
   figure.logo
@@ -48,7 +51,7 @@ section.leading-page
     // +rwd(560px)
     width: 52%
     +rwdh(640px)
-      width: 30%
+      width: 40%
     +pstc5
     figure.product
       width: 100%
@@ -57,12 +60,14 @@ section.leading-page
     p
       +fontH1
       text-align: center
-      font-weight: bold
+      font-weight: 400
+      +rwdh(640px)
+        font-size: 1rem
     .btn-box
       padding-top: 15%
       font-size: 0
       +rwdh(640px)
-        padding-top: 5%
+        // padding-top: 5%
       .btn
         width: 45%
         margin: 0 2.5%
@@ -72,14 +77,18 @@ section.leading-page
         cursor: pointer
         +dib
         +fontH1
+        +rwdh(640px)
+          font-size: 1rem
 
 
 section.banner
   position: relative
   figure.cow
-    width: 87.03125%
+    width: 80%
     margin-bottom: -13%
     float: right
+    +rwdh(640px)
+      margin-bottom: -16%
   .slogan-box
     clear: both
     width: 82.03125%
@@ -116,7 +125,7 @@ section.banner
 
 
 section.video,section.teaching
-  padding: 5% 0
+  padding-bottom: 5% 0
   .wrapper
     .video-carousel
       .video-item
@@ -134,7 +143,7 @@ section.video,section.teaching
             top: 0
             left: 0
         .info
-          padding: 4.6875% 5.46875%
+          padding: 4.6875% 6.3%
           .sub-title
             color: $red
             +fontH3
@@ -143,7 +152,7 @@ section.video,section.teaching
 
 
 section.setmeal
-  padding: 5% 0
+  padding-bottom: 5%
   .wrapper
     figure.title-icon
     .title
@@ -181,6 +190,7 @@ section.setmeal
               right: 0
               bottom: 0
           .info-txt
+            height: 23.646586rem
             font-weight: normal
             +fontP
             b

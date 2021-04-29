@@ -13,17 +13,17 @@ block footer
   include ../components/Footer.pug
 
 block body
+  .leading-page
+    figure.logo
+      img(src="./images/logo.png", alt="leading-page-logo")
+    .leading-page-box
+      figure.product
+        img(src="./images/leading_page_01.png", alt="leading-page-product")
+      p 請確認您已年滿18歲
+      .btn-box
+        .btn.yes Yes
+        .btn.no No
   article
-    section.leading-page
-      figure.logo
-        img(src="./images/logo.png", alt="leading-page-logo")
-      .leading-page-box
-        figure.product
-          img(src="./images/leading_page_01.png", alt="leading-page-product")
-        p 請確認您已年滿18歲
-        .btn-box
-          .btn.yes Yes
-          .btn.no No
     section.banner
       figure.cow
         img(src="./images/banner_cow.png", alt="banner-cow")
@@ -43,43 +43,46 @@ block body
         | 多種組合限時搶購 !
         br
         | 品嚐究極美味，滿足你吃與喝的雙重享受!
-    
-    section.video
-      .wrapper
+      .title-box
         figure.title-icon
           img(src="./images/title_icon.png", alt="icon")
         .title 感受最嗨搭配
+    
+    section.video
+      .wrapper
         .video-carousel#video-carousel.owl-carousel
           .video-item
             .iframe-box
-              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              iframe(src="https://www.youtube.com/embed/3jHcio7U0DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               .sub-title 發薪第一杯
-              P.txt 不要再等了，你的薪水已入帳，再等下去和牛烤熟就不好吃了!
+              P.txt 細膩軟嫩的和⽜，搭配散發檸檬清香的⾓HIGH，⽢甜入⼝即化的滋味，讓鮮甜與美味更加提升！
           .video-item
             .iframe-box
-              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              iframe(src="https://www.youtube.com/embed/J017TDXzvc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               .sub-title 充電第二杯
-              P.txt 把工作的不愉快一口氣倒進角嗨吧！ 讓沁涼的碳酸氣泡將煩膩的情緒一次帶走！
+              P.txt 豐厚濃郁的和⽜風味，搭上具有碳酸感的⾓HIGH，讓沁涼⼜爽快的氣泡⼀次帶走你⼼頭的不愉快！
           .video-item
             .iframe-box
-              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              iframe(src="https://www.youtube.com/embed/m5vjrocknfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               .sub-title 敘舊第三杯
-              P.txt 來場熱鬧的好友聚會，不怕喧囂與大啖一番料理，讓角HIGH搭和牛，爽快、俐落、有勁的口感齊湧上
+              P.txt 吃光鮮甜多汁的和⽜、敲杯圓潤順⼝的⾓HIGH，純粹和朋友敘敘舊、拌拌嘴豐富我們⽢苦與共的⼈⽣吧！
           .video-item
             .iframe-box
-              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              iframe(src="https://www.youtube.com/embed/k0f9K8O4JeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               .sub-title 乾杯嗨起來
-              P.txt 飲下沁涼清香的角HIGH、吃一口和牛 感受被角HIGH帶出的的圓潤甘甜肉香滋味在舌尖蔓延，再乾一杯，繼續嗨！
-        
-    section.setmeal
-      .wrapper
+              P.txt 和⽜搭⾓嗨！乾杯！
+                br
+                | 香甜濃郁的和⽜搭配具爽快碳酸感⾓HIGH，為這雙重絕佳組合美味乾杯！
         figure.title-icon
           img(src="./images/title_icon.png", alt="icon")
         .title 來份經典和牛饗宴
+        
+    section.setmeal
+      .wrapper
         .setmeal-carousel#setmeal-carousel.owl-carousel
           .setmeal-item
             figure.pic
@@ -185,24 +188,24 @@ block body
                 b 套餐內容
                 br
                 | 2杯角HIGH、澳洲特選厚切牛舌、澳洲和牛上等牛五花、日本和牛上等角切牛肉、日本和牛牛五花、西班牙伊比利豬肋條、西班牙伊比利霜降豬、雞腿肉、牛肚(第一牛胃) 、牛黃喉。
-
-    section.teaching
-      .wrapper
         figure.title-icon
           img(src="./images/title_icon.png", alt="icon")
         .title 角HIGH x 和牛 究極吃法大公開
+
+    section.teaching
+      .wrapper
         .video-carousel
           .video-item
             .iframe-box
-              iframe(src="https://www.youtube.com/embed/3oROzia_bfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              iframe(src="https://www.youtube.com/embed/CcGh7PTExl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
             .info
               P.txt 想知道吃和牛哪個部位搭配角HIGH會迸出什麼不同的火花嗎？讓安心亞與阿Ken專業的來！帶你吃出絕佳的美味搭配。
-
-    section.cooperation
-      .wrapper
         figure.title-icon
           img(src="./images/title_icon.png", alt="icon")
         .title 角嗨和牛祭合作店家
+
+    section.cooperation
+      .wrapper
         .pic-box
           figure.pic
             img(src="./images/cooperation_01.png", alt="cooperation_pic")
