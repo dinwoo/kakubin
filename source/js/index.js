@@ -1,4 +1,8 @@
 (function ($) {
+  let isStartASMR = false;
+  let isStartMenu = false;
+  let ASMRIndex = 1;
+  let menuIndex = 1;
   function setAnimate() {
     TweenMax.set("section.banner .cow", {
       opacity: 0,
@@ -93,6 +97,12 @@
       reverse: false, //動畫重複 default:true
     })
       .setTween(itemTween2)
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          isStartASMR = true;
+        }
+      })
       // .addIndicators({ name: "item02" }) // 指標顯示
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
@@ -107,6 +117,12 @@
       reverse: false, //動畫重複 default:true
     })
       .setTween(itemTween3)
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          isStartMenu = true;
+        }
+      })
       // .addIndicators({ name: "item03" }) // 指標顯示
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
@@ -147,14 +163,137 @@
     }, 200);
   }
 
+  function setGa() {
+    var gaController = new ScrollMagic.Controller();
+    // ------------------------------------------------------------------------------------------------------
+
+    // var ga1 = new ScrollMagic.Scene({
+    //   triggerElement: ".leading-page",
+    //   offset: 0, //指標位移
+    //   triggerHook: 0,
+    //   reverse: false, //動畫重複 default:true
+    // })
+    //   .on("enter leave", function (e) {
+    //     gtag('send', 'pageview', '18yearsold');
+    //   })
+    //   .addIndicators({ name: "ga-leading" }) // 指標顯示
+    //   .addTo(gaController);
+
+    var gaBanner = new ScrollMagic.Scene({
+      triggerElement: ".banner",
+      offset: 0, //指標位移
+      duration: $('.banner').height(),
+      triggerHook: 0,
+      reverse: true, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          console.log("Index ga")
+          gtag('send', 'pageview', 'Index');
+        }
+      })
+      // .addIndicators({ name: "ga-banner" }) // 指標顯示
+      .addTo(gaController);
+
+    var gaVideo = new ScrollMagic.Scene({
+      triggerElement: ".video",
+      offset: 0, //指標位移
+      duration: $('.video').height()/4,
+      triggerHook: .5,
+      reverse: true, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          // console.log("video ga")
+          gtag('send', 'pageview', 'ASMR'+ASMRIndex);
+          console.log('ASMR'+ASMRIndex)
+        }
+      })
+      .addIndicators({ name: "ga-video" }) // 指標顯示
+      .addTo(gaController);
+
+    var gaSetmeal = new ScrollMagic.Scene({
+      triggerElement: ".setmeal",
+      offset: 0, //指標位移
+      duration: $('.setmeal').height()/5,
+      triggerHook: .5,
+      reverse: true, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          // console.log("setmeal ga")
+          gtag('send', 'pageview', 'Menu'+menuIndex);
+          console.log('Menu'+menuIndex)
+        }
+      })
+      .addIndicators({ name: "ga-video" }) // 指標顯示
+      .addTo(gaController);
+
+    var gaTeaching = new ScrollMagic.Scene({
+      triggerElement: ".teaching",
+      offset: 0, //指標位移
+      duration: $('.teaching').height(),
+      triggerHook: .5,
+      reverse: true, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          console.log("video ga")
+          gtag('send', 'pageview', 'Video');
+        }
+      })
+      // .addIndicators({ name: "ga-teaching" }) // 指標顯示
+      .addTo(gaController);
+
+    var gaCooperation = new ScrollMagic.Scene({
+      triggerElement: ".cooperation",
+      offset: 0, //指標位移
+      duration: $('.cooperation').height(),
+      triggerHook: .5,
+      reverse: true, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        // console.log(e)
+        if(e.type=='enter'){
+          console.log("Kanpai ga")
+          gtag('send', 'pageview', 'Kanpai');
+        }
+      })
+      // .addIndicators({ name: "ga-cooperation" }) // 指標顯示
+      .addTo(gaController);
+
+
+  }
+
   $(document).ready(function () {
     let isOpen = false;
     setAnimate();
+    var gaController = new ScrollMagic.Controller();
+    // ------------------------------------------------------------------------------------------------------
+
+    var ga1 = new ScrollMagic.Scene({
+      triggerElement: ".leading-page",
+      offset: 0, //指標位移
+      triggerHook: 0,
+      reverse: false, //動畫重複 default:true
+    })
+      .on("enter leave", function (e) {
+        console.log('18yearsold')
+        gtag('send', 'pageview', '18yearsold');
+      })
+      // .addIndicators({ name: "ga-leading" }) // 指標顯示
+      .addTo(gaController);
+
     // doAnimate();
 
     $(".yes").on("click", function () {
       $(".leading-page").fadeOut();
       $('article').show();
+      setGa();
       doAnimate();
     });
     $(".no").on("click", function () {
@@ -175,23 +314,35 @@
     });
 
     let videoOwl = $("#video-carousel").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 10,
       responsiveClass: true,
       items: 1,
       nav: false,
       center: true,
       dots: true,
+      onChanged: function (e) {
+        if(!isStartASMR) return false;
+        ASMRIndex = e.item.index+1;
+        gtag('send', 'pageview', 'ASMR'+(e.item.index+1));
+        console.log('ASMR'+(e.item.index+1))
+      }
     });
 
     let setmealOwl = $("#setmeal-carousel").owlCarousel({
-      loop: true,
+      loop: false,
       margin: 10,
       responsiveClass: true,
       items: 1,
       nav: false,
       center: true,
       dots: true,
+      onChanged: function (e) {
+        if(!isStartMenu) return false;
+        menuIndex = e.item.index+1;
+        gtag('send', 'pageview', 'Menu'+(e.item.index+1));
+        console.log('Menu'+(e.item.index+1))
+      }
     });
 
     $(".menu-item:nth-child(1)").on("click", function () {
