@@ -211,7 +211,7 @@
           console.log('ASMR'+ASMRIndex)
         }
       })
-      .addIndicators({ name: "ga-video" }) // 指標顯示
+      // .addIndicators({ name: "ga-video" }) // 指標顯示
       .addTo(gaController);
 
     var gaSetmeal = new ScrollMagic.Scene({
@@ -229,7 +229,7 @@
           console.log('Menu'+menuIndex)
         }
       })
-      .addIndicators({ name: "ga-video" }) // 指標顯示
+      // .addIndicators({ name: "ga-video" }) // 指標顯示
       .addTo(gaController);
 
     var gaTeaching = new ScrollMagic.Scene({
