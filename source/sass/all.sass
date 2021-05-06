@@ -111,6 +111,8 @@ article
   overflow: hidden
   position: relative
   display: none
+  +rwd(768px)
+    padding-bottom: 20%
 
 header
   width: 100%
@@ -193,13 +195,45 @@ header
 
 footer
   width: 100%
-  max-width: 415px
+  padding: 1% 0
+  // max-width: 415px
   margin: auto
+  background-color: #000
   position: fixed
   bottom: 0
   right: 0
   left: 0
-  z-index: 101
+  z-index: 201
+  text-align: center
+  p
+    color: #fff
+    font-size: 2vw
+    +dib
+  figure
+    width: 5vw
+    margin: 0 1%
+    +dib
+  +rwd(1280px)
+    p
+      font-size: 3vw
+    figure
+      width: 7vw
+  +rwd(1280px)
+    p
+      font-size: 3vw
+    figure
+      width: 7vw
+  +rwd(768px)
+    p
+      font-size: 4vw
+    figure
+      width: 12vw
+  +rwd(415px)
+    padding: 2% 0
+    p
+      font-size: 5vw
+    figure
+      width: 15vw
 
 $red: #cc0000
 $yellow: #ffff00
