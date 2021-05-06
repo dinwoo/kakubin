@@ -195,7 +195,7 @@ header
 
 footer
   width: 100%
-  padding: 1% 0
+  // padding: .5% 0
   // max-width: 415px
   margin: auto
   background-color: #000
@@ -206,34 +206,41 @@ footer
   z-index: 201
   text-align: center
   p
-    color: #fff
-    font-size: 2vw
+    color: #fffd64
+    font-size: 4vw
+    letter-spacing: 2vw
     +dib
   figure
-    width: 5vw
+    width: 4.5vw
     margin: 0 1%
     +dib
-  +rwd(1280px)
-    p
-      font-size: 3vw
-    figure
-      width: 7vw
-  +rwd(1280px)
-    p
-      font-size: 3vw
-    figure
-      width: 7vw
+  // +rwd(1280px)
+  //   p
+  //     font-size: 3vw
+  //   figure
+  //     width: 7vw
   +rwd(768px)
     p
-      font-size: 4vw
-    figure
-      width: 12vw
-  +rwd(415px)
-    padding: 2% 0
-    p
       font-size: 5vw
+      letter-spacing: 1vw
     figure
-      width: 15vw
+      width: 5.5vw
+  +rwd(415px)
+    padding: 3.5% 0
+    p
+      font-size: 6vw
+      letter-spacing: .2vw
+    figure
+      width: 7vw
+      margin: 0 0.5%
+  +rwd(374px)
+    padding: 3.5% 0
+    p
+      font-size: 5.6vw
+      letter-spacing: .1vw
+    figure
+      width: 6vw
+      margin: 0 0.2%
 
 $red: #cc0000
 $yellow: #ffff00
