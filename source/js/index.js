@@ -10,30 +10,21 @@
       y: 20,
     });
 
-    TweenMax.set(
-      "section.banner figure.pic-1,section.banner figure.pic-2",
-      {
-        opacity: 0,
-        x: 80,
-        y: -15
-      }
-    );
+    TweenMax.set("section.banner figure.pic-1,section.banner figure.pic-2", {
+      opacity: 0,
+      x: 80,
+      y: -15,
+    });
 
-    TweenMax.set(
-      "section.banner figure.pic-3",
-      {
-        opacity: 0,
-        x: -50,
-      }
-    );
+    TweenMax.set("section.banner figure.pic-3", {
+      opacity: 0,
+      x: -50,
+    });
 
-    TweenMax.set(
-      "section.banner figure.pic-4",
-      {
-        opacity: 0,
-        x: 50,
-      }
-    );
+    TweenMax.set("section.banner figure.pic-4", {
+      opacity: 0,
+      x: 50,
+    });
 
     TweenMax.set(
       "section.banner .slogan-txt,section.banner .title-box,section.video,section.setmeal,section.teaching,section.cooperation",
@@ -69,12 +60,56 @@
     // ------------------------------------------------------------------------------------------------------
 
     var itemTween1 = new TimelineMax()
-      .add(TweenMax.to('section.banner .cow', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
-      .add(TweenMax.to('section.banner figure.pic-1', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
-      .add(TweenMax.to('section.banner figure.pic-2', 0.5, { opacity: 1, x: 0, y: 0,delay: -.2, ease: Power1.easeOut }))
-      .add(TweenMax.to('section.banner figure.pic-3,section.banner figure.pic-4', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
-      .add(TweenMax.to('section.banner .slogan-txt', 0.5, { opacity: 1, x: 0, y: 0,delay: -.5, ease: Power1.easeOut }))
-      .add(TweenMax.to('section.banner .title-box', 0.5, { opacity: 1, x: 0, y: 0,delay: -.5, ease: Power1.easeOut }))
+      .add(
+        TweenMax.to("section.banner .cow", 0.5, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          ease: Power1.easeOut,
+        })
+      )
+      .add(
+        TweenMax.to("section.banner figure.pic-1", 0.5, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          ease: Power1.easeOut,
+        })
+      )
+      .add(
+        TweenMax.to("section.banner figure.pic-2", 0.5, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          delay: -0.2,
+          ease: Power1.easeOut,
+        })
+      )
+      .add(
+        TweenMax.to(
+          "section.banner figure.pic-3,section.banner figure.pic-4",
+          0.5,
+          { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }
+        )
+      )
+      .add(
+        TweenMax.to("section.banner .slogan-txt", 0.5, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          delay: -0.5,
+          ease: Power1.easeOut,
+        })
+      )
+      .add(
+        TweenMax.to("section.banner .title-box", 0.5, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          delay: -0.5,
+          ease: Power1.easeOut,
+        })
+      );
 
     var itemScene1 = new ScrollMagic.Scene({
       triggerElement: "section.banner",
@@ -87,8 +122,14 @@
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
 
-    var itemTween2 = new TimelineMax()
-      .add(TweenMax.to('section.video', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
+    var itemTween2 = new TimelineMax().add(
+      TweenMax.to("section.video", 0.5, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        ease: Power1.easeOut,
+      })
+    );
 
     var itemScene2 = new ScrollMagic.Scene({
       triggerElement: "section.video",
@@ -99,7 +140,7 @@
       .setTween(itemTween2)
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
+        if (e.type == "enter") {
           isStartASMR = true;
         }
       })
@@ -107,8 +148,14 @@
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
 
-    var itemTween3 = new TimelineMax()
-      .add(TweenMax.to('section.setmeal', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
+    var itemTween3 = new TimelineMax().add(
+      TweenMax.to("section.setmeal", 0.5, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        ease: Power1.easeOut,
+      })
+    );
 
     var itemScene3 = new ScrollMagic.Scene({
       triggerElement: "section.setmeal",
@@ -119,7 +166,7 @@
       .setTween(itemTween3)
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
+        if (e.type == "enter") {
           isStartMenu = true;
         }
       })
@@ -127,8 +174,14 @@
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
 
-    var itemTween4 = new TimelineMax()
-      .add(TweenMax.to('section.teaching', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
+    var itemTween4 = new TimelineMax().add(
+      TweenMax.to("section.teaching", 0.5, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        ease: Power1.easeOut,
+      })
+    );
 
     var itemScene4 = new ScrollMagic.Scene({
       triggerElement: "section.teaching",
@@ -141,8 +194,14 @@
       .addTo(controller);
     // ------------------------------------------------------------------------------------------------------
 
-    var itemTween5 = new TimelineMax()
-      .add(TweenMax.to('section.cooperation', 0.5, { opacity: 1, x: 0, y: 0, ease: Power1.easeOut }))
+    var itemTween5 = new TimelineMax().add(
+      TweenMax.to("section.cooperation", 0.5, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        ease: Power1.easeOut,
+      })
+    );
 
     var itemScene5 = new ScrollMagic.Scene({
       triggerElement: "section.cooperation",
@@ -182,15 +241,18 @@
     var gaBanner = new ScrollMagic.Scene({
       triggerElement: ".banner",
       offset: 0, //指標位移
-      duration: $('.banner').height(),
+      duration: $(".banner").height(),
       triggerHook: 0,
       reverse: true, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
-          console.log("Index ga")
-          gtag('send', 'pageview', 'Index');
+        if (e.type == "enter") {
+          console.log("Index ga");
+          // gtag('send', 'pageview', 'Index');
+          gtag("event", "page_view", {
+            page_title: "Index",
+          });
         }
       })
       // .addIndicators({ name: "ga-banner" }) // 指標顯示
@@ -199,16 +261,19 @@
     var gaVideo = new ScrollMagic.Scene({
       triggerElement: ".video",
       offset: 0, //指標位移
-      duration: $('.video').height()/4,
-      triggerHook: .5,
+      duration: $(".video").height() / 4,
+      triggerHook: 0.5,
       reverse: true, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
+        if (e.type == "enter") {
           // console.log("video ga")
-          gtag('send', 'pageview', 'ASMR'+ASMRIndex);
-          console.log('ASMR'+ASMRIndex)
+          // gtag('send', 'pageview', 'ASMR'+ASMRIndex);
+          gtag("event", "page_view", {
+            page_title: "ASMR" + ASMRIndex,
+          });
+          console.log("ASMR" + ASMRIndex);
         }
       })
       // .addIndicators({ name: "ga-video" }) // 指標顯示
@@ -217,16 +282,19 @@
     var gaSetmeal = new ScrollMagic.Scene({
       triggerElement: ".setmeal",
       offset: 0, //指標位移
-      duration: $('.setmeal').height()/5,
-      triggerHook: .5,
+      duration: $(".setmeal").height() / 5,
+      triggerHook: 0.5,
       reverse: true, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
+        if (e.type == "enter") {
           // console.log("setmeal ga")
-          gtag('send', 'pageview', 'Menu'+menuIndex);
-          console.log('Menu'+menuIndex)
+          // gtag('send', 'pageview', 'Menu'+menuIndex);
+          gtag("event", "page_view", {
+            page_title: "Menu" + menuIndex,
+          });
+          console.log("Menu" + menuIndex);
         }
       })
       // .addIndicators({ name: "ga-video" }) // 指標顯示
@@ -235,15 +303,18 @@
     var gaTeaching = new ScrollMagic.Scene({
       triggerElement: ".teaching",
       offset: 0, //指標位移
-      duration: $('.teaching').height(),
-      triggerHook: .5,
+      duration: $(".teaching").height(),
+      triggerHook: 0.5,
       reverse: true, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
-          console.log("video ga")
-          gtag('send', 'pageview', 'Video');
+        if (e.type == "enter") {
+          console.log("video ga");
+          // gtag('send', 'pageview', 'Video');
+          gtag("event", "page_view", {
+            page_title: "Video",
+          });
         }
       })
       // .addIndicators({ name: "ga-teaching" }) // 指標顯示
@@ -252,21 +323,22 @@
     var gaCooperation = new ScrollMagic.Scene({
       triggerElement: ".cooperation",
       offset: 0, //指標位移
-      duration: $('.cooperation').height(),
-      triggerHook: .5,
+      duration: $(".cooperation").height(),
+      triggerHook: 0.5,
       reverse: true, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
         // console.log(e)
-        if(e.type=='enter'){
-          console.log("Kanpai ga")
-          gtag('send', 'pageview', 'Kanpai');
+        if (e.type == "enter") {
+          console.log("Kanpai ga");
+          // gtag('send', 'pageview', 'Kanpai');
+          gtag("event", "page_view", {
+            page_title: "Kanpai",
+          });
         }
       })
       // .addIndicators({ name: "ga-cooperation" }) // 指標顯示
       .addTo(gaController);
-
-
   }
 
   $(document).ready(function () {
@@ -282,8 +354,11 @@
       reverse: false, //動畫重複 default:true
     })
       .on("enter leave", function (e) {
-        console.log('18yearsold')
-        gtag('send', 'pageview', '18yearsold');
+        console.log("18yearsold");
+        // gtag('send', 'pageview', '18yearsold');
+        gtag("event", "page_view", {
+          page_title: "18yearsold",
+        });
       })
       // .addIndicators({ name: "ga-leading" }) // 指標顯示
       .addTo(gaController);
@@ -292,7 +367,7 @@
 
     $(".yes").on("click", function () {
       $(".leading-page").fadeOut();
-      $('article').show();
+      $("article").show();
       setGa();
       doAnimate();
     });
@@ -322,11 +397,14 @@
       center: true,
       dots: true,
       onChanged: function (e) {
-        if(!isStartASMR) return false;
-        ASMRIndex = e.item.index+1;
-        gtag('send', 'pageview', 'ASMR'+(e.item.index+1));
-        console.log('ASMR'+(e.item.index+1))
-      }
+        if (!isStartASMR) return false;
+        ASMRIndex = e.item.index + 1;
+        // gtag('send', 'pageview', 'ASMR'+(e.item.index+1));
+        gtag("event", "page_view", {
+          page_title: "ASMR" + (e.item.index + 1),
+        });
+        console.log("ASMR" + (e.item.index + 1));
+      },
     });
 
     let setmealOwl = $("#setmeal-carousel").owlCarousel({
@@ -338,11 +416,14 @@
       center: true,
       dots: true,
       onChanged: function (e) {
-        if(!isStartMenu) return false;
-        menuIndex = e.item.index+1;
-        gtag('send', 'pageview', 'Menu'+(e.item.index+1));
-        console.log('Menu'+(e.item.index+1))
-      }
+        if (!isStartMenu) return false;
+        menuIndex = e.item.index + 1;
+        // gtag('send', 'pageview', 'Menu'+(e.item.index+1));
+        gtag("event", "page_view", {
+          page_title: "Menu" + (e.item.index + 1),
+        });
+        console.log("Menu" + (e.item.index + 1));
+      },
     });
 
     $(".menu-item:nth-child(1)").on("click", function () {
@@ -380,6 +461,5 @@
         500
       );
     });
-
   });
 })($);
