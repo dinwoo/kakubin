@@ -407,6 +407,13 @@
       },
     });
 
+    $('.video .arrow-left').click(function() {
+      videoOwl.trigger('prev.owl.carousel');
+    })
+    $('.video .arrow-right').click(function() {
+      videoOwl.trigger('next.owl.carousel');
+    })
+
     let setmealOwl = $("#setmeal-carousel").owlCarousel({
       loop: false,
       margin: 10,
@@ -425,6 +432,13 @@
         console.log("Menu" + (e.item.index + 1));
       },
     });
+
+    $('.setmeal .arrow-left').click(function() {
+      setmealOwl.trigger('prev.owl.carousel');
+    })
+    $('.setmeal .arrow-right').click(function() {
+      setmealOwl.trigger('next.owl.carousel');
+    })
 
     $(".menu-item:nth-child(1)").on("click", function () {
       closeMenu();

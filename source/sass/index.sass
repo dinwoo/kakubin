@@ -18,8 +18,8 @@ figure.title-icon
 .owl-dots
   text-align: center
   .owl-dot
-    width: 10px
-    height: 10px
+    width: 15px
+    height: 15px
     // background-color: #fff !important
     border: 2px solid #000 !important
     border-radius: 50%
@@ -30,6 +30,16 @@ figure.title-icon
     &:focus
       outline: none
 
+.arrow-left,.arrow-right
+  width: 6%
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  cursor: pointer
+.arrow-left
+  left: 1%
+.arrow-right
+  right: 1%
 
 
 .leading-page
@@ -132,6 +142,7 @@ section.banner
 
 section.video,section.teaching
   padding-bottom: 5% 0
+  position: relative
   .wrapper
     .video-carousel
       .video-item
@@ -149,7 +160,7 @@ section.video,section.teaching
             top: 0
             left: 0
         .info
-          padding: 4.6875% 6.3%
+          padding: 4.6875% 6%
           .sub-title
             color: $red
             +fontH3
@@ -159,6 +170,7 @@ section.video,section.teaching
 
 section.setmeal
   padding-bottom: 5%
+  position: relative
   .wrapper
     figure.title-icon
     .title
